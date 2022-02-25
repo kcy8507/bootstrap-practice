@@ -1,0 +1,83 @@
+@use "reset";
+$bg-color: #f2f2f2;
+$height: 300px;
+$primary-color: rgb(233, 233, 255);
+
+@mixin default-font($size) {
+  font-size: $size;
+  letter-spacing: -1px;
+  text-align: center;
+}
+@mixin box($w, $h) {
+  width: $w;
+  height: $h;
+}
+@mixin inout($size, $value) {
+  border: solid $size rgb(247, 255, 137);
+  #{$value}: 50px;
+}
+%item {
+  border: 1px solid red;
+  width: 50px;
+  height: 50px;
+}
+
+.border {
+  border: 1px solid black;
+}
+.row {
+  @include default-font(20px);
+  height: $height;
+}
+
+.col {
+  @include default-font(30px);
+  background: $bg-color;
+  color: $primary-color;
+}
+
+.col:nth-child(1) .item {
+  @extend %item;
+  @extend .border;
+  background-color: rgb(246, 0, 33);
+  @include box(100px, 200px);
+  @include inout(20px, padding);
+}
+.col:nth-child(2) .item {
+  @extend %item;
+  @extend .border;
+  background-color: rgb(114, 62, 255);
+  @include box(100px, 200px);
+  @include inout(20px, padding);
+}
+.col:nth-child(3) .item {
+  @extend %item;
+  @extend .border;
+  background-color: rgb(67, 255, 114);
+  @include box(100px, 200px);
+  @include inout(60px, margin);
+}
+
+h1 {
+  font: {
+    family: "Malgun Gothic";
+    size: 25px;
+    style: normal;
+    weight: bold;
+  }
+  line-height: 1;
+}
+
+.btn {
+  color: #000;
+  &.active {
+    color: coral;
+  }
+}
+.list_gnb {
+  li {
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

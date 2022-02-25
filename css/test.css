@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+.col:nth-child(3) .item,
+.col:nth-child(2) .item,
+.col:nth-child(1) .item {
+  border: 1px solid red;
+  width: 50px;
+  height: 50px;
+}
+
+.border,
+.col:nth-child(3) .item,
+.col:nth-child(2) .item,
+.col:nth-child(1) .item {
+  border: 1px solid black;
+}
+
+.row {
+  font-size: 20px;
+  letter-spacing: -1px;
+  text-align: center;
+  height: 300px;
+}
+
+.col {
+  font-size: 30px;
+  letter-spacing: -1px;
+  text-align: center;
+  background: #f2f2f2;
+  color: #e9e9ff;
+}
+
+.col:nth-child(1) .item {
+  background-color: #f60021;
+  width: 100px;
+  height: 200px;
+  border: solid 20px #f7ff89;
+  padding: 50px;
+}
+
+.col:nth-child(2) .item {
+  background-color: #723eff;
+  width: 100px;
+  height: 200px;
+  border: solid 20px #f7ff89;
+  padding: 50px;
+}
+
+.col:nth-child(3) .item {
+  background-color: #43ff72;
+  width: 100px;
+  height: 200px;
+  border: solid 60px #f7ff89;
+  margin: 50px;
+}
+
+h1 {
+  font-family: "Malgun Gothic";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.btn {
+  color: #000;
+}
+.btn.active {
+  color: coral;
+}
+
+.list_gnb li:first-child {
+  margin-left: 0;
+} /*# sourceMappingURL=test.css.map */
